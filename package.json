@@ -1,0 +1,29 @@
+{
+    "name": "TypescriptProject",
+    "main": "index.html",
+    "js-flags": "--expose-gc",
+    "window": {
+        "title": "",
+        "toolbar": false,
+        "width": 816,
+        "height": 624,
+        "icon": "icon/icon.png"
+    },
+    "version": "1.0.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "watch": "webpack --watch"
+    },
+    "keywords": [],
+    "author": "Alan Rawkins",
+    "license": "ISC",
+    "description": "A starter typscript canvas project",
+    "devDependencies": {
+        "ts-loader": "^3.5.0",
+        "typescript": "^2.7.2",
+        "uglifyjs-webpack-plugin": "^1.2.7",
+        "webpack": "^3.11.0",
+        "webpack-merge": "^4.1.3"
+    }
+}
