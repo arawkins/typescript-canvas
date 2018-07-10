@@ -3,6 +3,9 @@ import { iShape } from './interfaces';
 export class Circle implements iShape {
    public x: number = 0;
    public y: number = 0;
+   public vx: number = 0;
+   public vy: number = 0;
+
    public radius: number = 10;
    public lineWidth: number = 2;
    public color: string = "red";
@@ -10,10 +13,25 @@ export class Circle implements iShape {
    {
       this.x = x;
       this.y = y;
+      this.vx = Math.random() * 15;
+      this.vy = Math.random() * 15;
+
       this.radius = radius;
       this.color = color;
       this.lineWidth = line_width;
    }
+
+   public move = (): void => {
+       this.x += this.vx;
+       this.y += this.vy;
+       if (this.x > 1280 || this.x < 0) {
+           this.vx *= -1;
+       }
+       if (this.y > 720 || this.y < 0) {
+           this.vy *= -1;
+       }
+   }
+
    public draw = (ctx:CanvasRenderingContext2D): void => {
       ctx.save();
       ctx.beginPath();
