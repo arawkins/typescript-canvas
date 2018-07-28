@@ -1,0 +1,13 @@
+body {
+    background:black;
+}
+
+#container {
+    margin:0 auto;
+    width:100%;
+    max-width:1280px;   
+}
+
+#game {
+    border:3px solid #333;
+}
