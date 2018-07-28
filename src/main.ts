@@ -34,7 +34,6 @@ window.onload = () => {
     gameLoop();
 
     canvas.onclick = (e) => {
-        console.log(e);
         var c:Circle = new Circle(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop, Math.random()*25, "blue");
         shapes.push(c);
     }
