@@ -13,8 +13,8 @@ export class Circle implements iShape {
    {
       this.x = x;
       this.y = y;
-      this.vx = Math.random() * 15;
-      this.vy = Math.random() * 15;
+      this.vx = Math.random() * 15 - Math.random() * 15;
+      this.vy = Math.random() * 15 - Math.random() * 15;
 
       this.radius = radius;
       this.color = color;

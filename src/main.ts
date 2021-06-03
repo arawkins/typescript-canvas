@@ -15,6 +15,7 @@ function gameLoop() {
         c.move();
         c.draw(ctx);
     });
+    
 
 }
 
