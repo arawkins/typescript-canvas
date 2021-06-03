@@ -2,8 +2,13 @@
 A basic typescript canvas starter project. Uses webpack to process typescript files and minify.
 
 `npm install`
+Get all the stuff
 
-`npm run watch`
+`npm run build`
+Compile the project
+
+`npm run start`
+Compile and start up the dev server at localhost:8080
 
 - Code typscript in the src folder, watch it appear in the dist folder. 
 - Main.ts is the entry point for the game
