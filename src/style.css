@@ -1,13 +1,18 @@
+html {
+    padding:0;
+    margin:0;
+}
+
 body {
     background:black;
+    padding:0;
+    margin:0;
 }
 
 #container {
-    margin:0 auto;
-    width:100%;
-    max-width:1280px;   
+    
 }
 
 #game {
-    border:3px solid #333;
+    
 }

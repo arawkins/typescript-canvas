@@ -3,6 +3,11 @@ export interface iShape {
    move(): void;
    x: number;
    y: number;
+   vx: number;
+   vy: number;
+   width: number;
+   height:number;
    color: string;
+   life: number;
    lineWidth: number;
 }
