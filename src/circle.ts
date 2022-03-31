@@ -1,4 +1,6 @@
-export class Circle {
+import { Shape } from "./shape";
+
+export class Circle extends Shape {
     public x: number = 0;
     public y: number = 0;
     public vx: number = 0;
@@ -10,7 +12,8 @@ export class Circle {
     public color: string = "red";
     public life: number = 1;
 
-    constructor(x: number = 0, y: number = 0, radius: number = 10, color: string = "red", line_width: number = 2) {
+    constructor(x: number = 0, y: number = 0, radius: number = 10, color: string = "red", line_width: number = 2, life:number = 1) {
+        super(x, y, color, line_width, life)
         this.x = x;
         this.y = y;
         this.vx = 0;
@@ -21,10 +24,6 @@ export class Circle {
         this.lineWidth = line_width;
     }
 
-    public move = (): void => {
-        this.x += this.vx;
-        this.y += this.vy;
-    }
 
     public draw = (ctx: CanvasRenderingContext2D): void => {
         if (ctx != null) {
@@ -38,6 +37,5 @@ export class Circle {
             ctx.restore();
             ctx.globalAlpha = 1;
         }
-
     }
 }
