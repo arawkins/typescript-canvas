@@ -1,16 +1,7 @@
 import { Shape } from "./shape";
 
 export class Circle extends Shape {
-    public x: number = 0;
-    public y: number = 0;
-    public vx: number = 0;
-    public vy: number = 0;
-    public width: number = 0;
-    public height: number = 0;
     public radius: number = 10;
-    public lineWidth: number = 2;
-    public color: string = "red";
-    public life: number = 1;
 
     constructor(x: number = 0, y: number = 0, radius: number = 10, color: string = "red", line_width: number = 2, life:number = 1) {
         super(x, y, color, line_width, life)

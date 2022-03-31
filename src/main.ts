@@ -1,6 +1,6 @@
-import {
-    Circle
-} from './circle';
+import { Shape } from './shape';
+import { Circle } from './circle';
+import { Square } from './square';
 import './style.css';
 
 var canvas: HTMLCanvasElement;
@@ -8,8 +8,11 @@ var ctx: CanvasRenderingContext2D;
 let width = window.innerWidth;
 let height = window.innerHeight;
 let deadCircles: Array < Circle > = [];
+let deadSquares: Array < Square > = [];
 var circles: Array < Circle > = [];
+var squares: Array < Square > = [];
 let maxCircles = 250;
+let maxSquares = 250;
 let spawnX = width/2;
 let spawnY = height/2;
 
@@ -21,7 +24,7 @@ function gameLoop() {
     if (circles.length < maxCircles) {
         spawnCircle(spawnX, spawnY);
     }
-
+    
     circles.forEach((c, i) => {
         c.move();
         if (c.x <= -c.width || c.x >= width + c.width) {
@@ -40,6 +43,8 @@ function gameLoop() {
 
 
 }
+
+
 
 function recycle(c: Circle) {
     deadCircles.push(c);
@@ -91,5 +96,3 @@ window.onload = () => {
         spawnY = e.clientY - canvas.offsetTop;
     }
 }
-
-export {circles, deadCircles};
